@@ -157,11 +157,11 @@ class ControlCenter(DeviceHandler):
 
 
 def main():
-    # Device is writable my members of group input which ordinary users are a member of.
-    # from elevate import elevate
+    # Device is writable my members of group input which ordinary users are a member of so not sure why we need this.
+    from elevate import elevate
 
-    # if not os.geteuid() == 0:
-    #    elevate()
+    if not os.geteuid() == 0:
+       elevate()
 
     control = ControlCenter(vendor_id=0x048d, product_id=0x6004)
 
