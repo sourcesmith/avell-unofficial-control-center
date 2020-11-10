@@ -162,7 +162,7 @@ def main():
     if not os.geteuid() == 0:
         elevate()
 
-    control = ControlCenter(vendor_id=0x048d, product_id=0xce00)
+    control = ControlCenter(vendor_id=0x048d, product_id=0x6004)
 
     parser = argparse.ArgumentParser(
         description=textwrap.dedent('''
